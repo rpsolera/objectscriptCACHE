@@ -1,0 +1,63 @@
+IRIS for Windows^MAC^routine output by %apiRTN^^~Format=IRIS.S~^RAW
+%RO on 26 Jun 2023 10:43:57PM
+YYRPS002^MAC^^66651,71492.337439^0
+YYRPS002	; CALCULADORA BÁSICA
+	;
+	;
+	write #
+	;
+	;
+	write !, "Digite o primeiro valor:"
+	;
+	write !
+	;
+	read valor1
+	;
+	write !
+	;
+	write !, "Digite o segundo valor:"
+	;
+	write !
+	;
+	read valor2
+	;
+	write !
+	;
+	set soma = valor1 + valor2
+	;
+	set div = valor1 / valor2
+	;
+	set mult = valor1 * valor2
+	;
+	if valor1 > valor2 do
+	. set sub = valor1 - valor2
+	if valor2 > valor1 do
+	. set sub = valor2 - valor1
+	;
+	;
+	write !, "Digite a operação [1]SOMA, [2]SUBTRAÇÃO, [3]DIVISÃO, [4]MULTIPLICAÇÃO:"
+	;
+	write !
+	;
+	read opcao
+	;
+	;
+	if opcao'=1 && (opcao'=2) && (opcao'=3) && (opcao'=4) do
+	. write !, "Opção Inválida"
+	;
+	if opcao = 1 do
+	. write !, "A soma dos valores digitados é: "_soma quit
+	if opcao = 2 do
+	. write !, "A subtração dos valores digitados é: "_sub quit
+	if opcao = 3 do
+	. write !, "A divisão dos valores digitados é: "_div quit
+	if opcao = 4 do
+	. write !, "A multiplicação dos valores digitados é: "_mult quit
+	;
+	;
+	;
+	quit
+	
+
+
+
