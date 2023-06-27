@@ -1,7 +1,4 @@
-IRIS for Windows^MAC^routine output by %apiRTN^^~Format=IRIS.S~^RAW
-%RO on 26 Jun 2023 10:43:57PM
-YYRPS002^MAC^^66651,71492.337439^0
-YYRPS002	; CALCULADORA B¡SICA
+YYRPS002	; CALCULADORA B√ÅSICA
 	;
 	;
 	write #
@@ -35,7 +32,7 @@ YYRPS002	; CALCULADORA B¡SICA
 	. set sub = valor2 - valor1
 	;
 	;
-	write !, "Digite a operaÁ„o [1]SOMA, [2]SUBTRA«√O, [3]DIVIS√O, [4]MULTIPLICA«√O:"
+	write !, "Digite a opera√ß√£o [1]SOMA, [2]SUBTRA√á√ÉO, [3]DIVIS√ÉO, [4]MULTIPLICA√á√ÉO:"
 	;
 	write !
 	;
@@ -43,16 +40,16 @@ YYRPS002	; CALCULADORA B¡SICA
 	;
 	;
 	if opcao'=1 && (opcao'=2) && (opcao'=3) && (opcao'=4) do
-	. write !, "OpÁ„o Inv·lida"
+	. write !, "Op√ß√£o Inv√°lida"
 	;
 	if opcao = 1 do
-	. write !, "A soma dos valores digitados È: "_soma quit
+	. write !, "A soma dos valores digitados √©: "_soma quit
 	if opcao = 2 do
-	. write !, "A subtraÁ„o dos valores digitados È: "_sub quit
+	. write !, "A subtra√ß√£o dos valores digitados √©: "_sub quit
 	if opcao = 3 do
-	. write !, "A divis„o dos valores digitados È: "_div quit
+	. write !, "A divis√£o dos valores digitados √©: "_div quit
 	if opcao = 4 do
-	. write !, "A multiplicaÁ„o dos valores digitados È: "_mult quit
+	. write !, "A multiplica√ß√£o dos valores digitados √©: "_mult quit
 	;
 	;
 	;
