@@ -1,0 +1,75 @@
+IRIS for Windows^MAC^routine output by %apiRTN^^~Format=IRIS.S~^RAW
+%RO on 28 Jun 2023 06:10:19AM
+YYRPS010^MAC^^66652,75999.1805203^0
+YYRPS010	;CADASTRO DE USUÁRIO
+	;
+	;
+	write #
+	;
+	;
+	write !, "Nome:"
+	;
+	;
+	write !
+	;
+	;
+	read nome
+	;
+	;
+	write !
+	;
+	;
+	write !, "Sobrenome:"
+	;
+	;
+	write !
+	;
+	;
+	read sobrenome
+	;
+	;
+	write !
+	;
+	;
+	write !,"Data de nascimento:"
+	;
+	;
+	write !
+	;
+	;
+	read nasc
+	;
+	;
+	write !
+	;
+	;
+	write !, "Endereço:"
+	;
+	;
+	write !
+	;
+	;
+	read endereco
+	;
+	;
+	write !
+	;
+	;
+	write !, nome_" "_sobrenome
+	;
+	set datAtual = $PIECE($ZDATE(+$HOROLOG,4),"/",3)
+	;
+	set idade = datAtual - $PIECE(nasc,"/",3)
+	;
+	write !, "Idade: "_idade
+	;
+	write !
+	;
+	write endereco
+	;
+	write !
+	;
+	quit
+
+
+

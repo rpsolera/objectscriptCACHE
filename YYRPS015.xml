@@ -1,0 +1,41 @@
+IRIS for Windows^MAC^routine output by %apiRTN^^~Format=IRIS.S~^RAW
+%RO on 28 Jun 2023 06:10:30AM
+YYRPS015^MAC^^66652,76562.3818583^0
+YYRPS015	; CALCULADORA
+	;
+	;
+	write #
+	;
+	;
+	write !, "Digite o primeiro número: "
+	;
+	read valor1
+	;
+	write !, "Digite o segundo número: "
+	;
+	read valor2
+	;
+	set soma = valor1 + valor2
+	;
+	set sub = valor1 - valor2
+	;
+	set mult = valor1 * valor2
+	;
+	set div = valor1 / valor2
+	;
+	write !, "Soma.: " _valor1_" + "_valor2_" = "_soma
+	;
+	write !, "Subtração.: " _valor1_" - "_valor2_" = "_sub
+	;
+	write !, "Multiplicação.: " _valor1_" * "_valor2_" = "_mult
+	;
+	write !, "Divisão.: " _valor1_" / "_valor2_" = "_div
+	;
+	;
+	;
+	quit
+	
+	
+
+
+
