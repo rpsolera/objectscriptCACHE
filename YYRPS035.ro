@@ -1,0 +1,22 @@
+IRIS for Windows^MAC^routine output by %apiRTN^^~Format=IRIS.S~^RAW
+%RO on 28 Jun 2023 09:30:36PM
+YYRPS035^MAC^^66653,75754.4459908^0
+YYRPS035	; RESULTADO DA SOMA
+	;
+	;
+	write #
+	;
+	;
+	set resultado=0
+	;
+	;
+	for cont1=1:1:100 do
+	. set soma = cont1+resultado
+	. write !, cont1_" + "_resultado_" = "_soma
+	. set resultado = soma
+	;
+	;
+	quit
+
+
+

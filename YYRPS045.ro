@@ -1,0 +1,31 @@
+IRIS for Windows^MAC^routine output by %apiRTN^^~Format=IRIS.S~^RAW
+%RO on 28 Jun 2023 09:31:02PM
+YYRPS045^MAC^^66653,77297.4973328^0
+YYRPS045	; NÚMEROS ORDENADOS
+	;
+	;
+	write #
+	;
+	;
+	set maiorNumeroDigitado = 0
+	;
+	for numero=1:1:10 do
+	. write !, "Digite um número :"
+	. read numeroDigitado
+	. if numeroDigitado > maiorNumeroDigitado do
+	. . set maiorNumeroDigitado = numeroDigitado
+	;
+	;
+	write !
+	write !
+	write !
+	write !
+	;
+	;
+	write !, "O maior número digitado foi: "_maiorNumeroDigitado
+	;
+	;
+	quit
+
+
+
