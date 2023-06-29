@@ -1,20 +1,20 @@
 IRIS for Windows^MAC^routine output by %apiRTN^^~Format=IRIS.S~^RAW
 %RO on 28 Jun 2023 06:10:43AM
 YYRPS020^MAC^^66652,79498.3587009^0
-YYRPS020	; PAR OU ÕMPAR
+YYRPS020	; PAR OU √çMPAR
 	;
 	;
 	write #
 	;
 	;
-	write !, "Digite um n˙mero: "
+	write !, "Digite um n√∫mero: "
 	;
 	read numero
 	;
 	if numero#2=0 do
-	.write !, "O n˙mero "_numero_" È PAR!"
+	.write !, "O n√∫mero "_numero_" √© PAR!"
 	if numero#2'=0 do
-	.write !, "O n˙mero "_numero_" È ÕMPAR!"
+	.write !, "O n√∫mero "_numero_" √© √çMPAR!"
 	;
 	;
 	;
