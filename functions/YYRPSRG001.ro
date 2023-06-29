@@ -1,0 +1,286 @@
+IRIS for Windows^MAC^routine output by %apiRTN^^~Format=IRIS.S~^RAW
+%RO on 29 Jun 2023 07:30:18PM
+YYRPSRG001^MAC^^66654,70003.1754143^0
+YYRPSRG001; ROTINA DE EXERCÍCIOS COMPLEMENTARES
+		;
+		;
+		; [EXERCÍCIO 1] - CALCULAR ÁREA RETÂNGULO
+		; 
+		;
+		;
+CalcularAreaRetangulo(valBase,valAltura)
+		;
+		new resultado
+		;
+		;
+		; LÓGICA DO EXERCÍCIO
+		; 
+		set resultado = valBase * valAltura
+		;
+		write "Área do retângulo.: "_resultado
+		;
+		;
+		quit 1
+		;
+		;
+		;
+		; [EXERCÍCIO 2] - CALCULAR IDADE
+		; 
+		; 
+CalcularIdade(dataNascimento)
+		;
+		new calcIdade
+		;
+		;
+		; LÓGICA DO EXERCÍCIO
+		; 
+		set calcIdade = $HOROLOG - $ZDATEH(dataNascimento,4)
+		;
+		write !, $PIECE($ZDATE($HOROLOG),"/",3) - $PIECE(dataNascimento,"/",3)_" Anos"
+		;
+		write !, calcIdade_" Dias"
+		;
+		quit 1
+		;
+		;
+		;
+		; [EXERCÍCIO 3] - CALCULAR ELEITORES
+		; 
+		;
+CalcularEleicao(totalEleitores,totalBrancos,totalNulos,totalValidos)
+		;
+		;
+		new percBrancos,percNulos,percValidos
+		;
+		;
+		; LÓGIDA DO EXERCÍCIO
+		; 
+		set percBrancos = (totalBrancos / totalEleitores)*100
+		;
+		set percNulos = (totalNulos / totalEleitores)*100
+		;
+		set percValidos = (totalValidos / totalEleitores)*100
+		;
+		;
+		write !, "Eleitores: "_totalEleitores
+		;
+		write !, "Brancos: "_percBrancos_"%"
+		;
+		write !, "Nulos: "_percNulos_"%"
+		;
+		write !, "Válidos: "_percValidos_"%"
+		;
+		;
+		quit 1
+		;
+		;
+		;
+		; [EXERCÍCIO 4] - CALCULAR HORA EXTRA
+		;
+		;
+CalcularHoraExtra(horasTrabalhadas,valorHora)
+		;
+		;
+		new salario, horasSemana, horasExtras
+		;
+		;
+		; LÓGICA DO EXERCÍCIO
+		; 
+		set horasSemana = 40
+		; 
+		if horasTrabalhadas<=(horasSemana*4) do
+		. set salario = horasTrabalhadas * valorHora
+		. write !, "Salário.: R$ "_salario
+		;
+		;
+		if horasTrabalhadas>(horasSemana*4) do
+		. set horasExtra = horasTrabalhadas - 160
+		. set salario = ((horasTrabalhadas-horasExtra)*valorHora)+(horasExtra*(valorHora*1.5))
+		. write !, "Salário.: R$ "_salario
+		;
+		;
+		;
+		;
+		;
+		;
+		quit 1
+		;
+		;
+		; [EXERCÍCIO 5] - CALCULAR SALÁRIO VENDEDOR
+		;
+		;
+CalcularSalarioVendas(salarioFixo,totalVendido)
+		;
+		;
+		new salario, vendasExtra
+		;
+		;
+		;
+		; LÓGICA DO EXERCÍCIO
+		;
+		;
+		;
+		if totalVendido <= 1500 do
+		. set salario = salarioFixo + (3/100*totalVendido)
+		. write !, "Salário com comissão.: R$ "_salario
+		;
+		if totalVendido > 1500 do
+		. set vendasExtra = totalVendido - 1500
+		. set salario = salarioFixo + (5/100*vendasExtra) + (3/100*(totalVendido-vendasExtra))
+		. write !, "Salário com comissão.: R$ "_salario
+		;
+		;
+		;
+		;
+		;
+		quit 1
+		;
+		;
+		;
+		;
+		; [EXERCÍCIO 6] - CALCULAR TOTAL DO PRODUTO
+		;
+		;
+CalcularTotaldoProduto(nome,qtdeCompra,valorUnit)
+		;
+		;
+		new desconto, total, totalDesconto
+		;
+		;
+		;
+		; LÓGICA DO EXERCÍCIO
+		;
+		if qtdeCompra <= 5 do
+		. set total = qtdeCompra * valorUnit
+		. set desconto = 2/100*total
+		. set totalDesconto = total - desconto
+		. write !, nome
+		. write !, "Valor total: R$ "_total
+		. write !, "Desconto: R$ "_desconto
+		. write !, "Valor total c/ desconto: R$ "_totalDesconto
+		;
+		if qtdeCompra > 5 && (qtdeCompra<=10) do
+		. write !, nome
+		. set total = qtdeCompra * valorUnit
+		. set desconto = 3/100*total
+		. set totalDesconto = total - desconto
+		. write !, "Valor total: R$ "_total
+		. write !, "Desconto: R$ "_desconto
+		. write !, "Valor total c/ desconto: R$ "_totalDesconto
+		;
+		if qtdeCompra > 10 do
+		. write !, nome
+		. set total = qtdeCompra * valorUnit
+		. set desconto = 5/100*total
+		. set totalDesconto = total - desconto
+		. write !, "Valor total: R$ "_total
+		. write !, "Desconto: R$ "_desconto
+		. write !, "Valor total c/ desconto: R$ "_totalDesconto
+		;
+		;
+		;
+		;
+		quit 1
+		;
+		;
+		;
+		;
+		; [EXERCÍCIO 7] - CALCULAR APOSENTADORIA
+		;
+		;
+CalcularAposentadoria(codigo,dataNasc,dataIniEmpresa)
+		;
+		;
+		;
+		new idadeFuncionario, anoTrabalhado
+		;
+		;
+		;
+		; LÓGICA DO EXERCÍCIO
+		; 
+		; 
+		set idadeFuncionario = $PIECE($ZDATE($HOROLOG),"/",3) - $PIECE(dataNasc,"/",3)
+		set anoTrabalhado = $PIECE($ZDATE($HOROLOG),"/",3) - $PIECE(dataIniEmpresa,"/",3)
+		;
+		;
+		if idadeFuncionario>=65 ! (anoTrabalhado>=30) !((idadeFuncionario>=60)&&(anoTrabalhado>=25)) do
+		. write !, "Código do Funcionário: "_codigo
+		. write !, "Idade: "_idadeFuncionario
+		. write !, "Tempo de Trabalho: "_anoTrabalhado
+		. write !, "Requerer Aposentadoria"
+		;
+		if anoTrabalhado<25 && (idadeFuncionario<=60) do
+		. write !, "Código do Funcionário: "_codigo
+		. write !, "Idade: "_idadeFuncionario
+		. write !, "Tempo de Trabalho: "_anoTrabalhado
+		. write !, "Não Requerer"
+		;
+		;
+		;
+		;
+		quit 1
+		;
+		;
+		;
+		;
+		; [EXERCÍCIO 8] - CALCULAR SOMA STRING
+		; 
+		; 
+CalcularSomaString(numeros)
+		;
+		;
+		new cont,numero1, soma, maior
+		;
+		set (soma,maior,qtd,media)=0
+		;
+		for cont=1:1:$PIECE(numeros,",",*) do
+		. set numero1 = $PIECE(numeros,",",cont)
+		. write $PIECE(numeros,",",cont)_" "
+		. set soma = soma + numero1
+		. set qtd = $LENGTH(numeros,",")
+		. if numero1 > maior do
+		. . set maior = numero1
+		;
+		set media = soma/qtd
+		;
+		write !, "SOMA DOS NÚMEROS: "_soma
+		write !, "MAIOR NÚMERO: "_maior
+		write !, "MÉDIA DOS NÚMEROS: "_media
+		;
+		;
+		;
+		;
+		quit 1
+		;
+		;
+		;
+		; [EXERCÍCIO 9] - CONSULTA NÚMEROS POR DEZ
+		;
+		; 
+ConsultaNumerosPorDez()
+		;
+		;
+		;
+		new numero,contador
+		;
+		;
+		;
+		for contador=1:1:100 do
+		. if contador#10=0 do
+		. . write !, contador_" É DIVISÍVEL POR 10"
+		;
+		;
+		;
+		;
+		;
+		;
+		;
+		; EXERCÍCIOS REALIZADOS POR: RODOLFO P. SOLERA
+		;
+		;
+		quit 1
+		
+		
+
+
+
