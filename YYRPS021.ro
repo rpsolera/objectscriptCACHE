@@ -12,7 +12,7 @@ YYRPS021	; COMANDO FOR
 	. if numero#2 = 0 do
 	. . write !, numero_" - PAR"
 	. if numero#2'=0 do
-	. . write !, numero_" - ÕMPAR"
+	. . write !, numero_" - √çMPAR"
 	;
 	;
 	quit
