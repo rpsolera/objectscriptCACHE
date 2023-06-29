@@ -1,7 +1,7 @@
 IRIS for Windows^MAC^routine output by %apiRTN^^~Format=IRIS.S~^RAW
 %RO on 28 Jun 2023 06:10:19AM
 YYRPS010^MAC^^66652,75999.1805203^0
-YYRPS010	;CADASTRO DE USU¡RIO
+YYRPS010	;CADASTRO DE USU√ÅRIO
 	;
 	;
 	write #
@@ -43,7 +43,7 @@ YYRPS010	;CADASTRO DE USU¡RIO
 	write !
 	;
 	;
-	write !, "EndereÁo:"
+	write !, "Endere√ßo:"
 	;
 	;
 	write !
