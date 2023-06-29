@@ -7,11 +7,11 @@ YYRPS015	; CALCULADORA
 	write #
 	;
 	;
-	write !, "Digite o primeiro número: "
+	write !, "Digite o primeiro nÃºmero: "
 	;
 	read valor1
 	;
-	write !, "Digite o segundo número: "
+	write !, "Digite o segundo nÃºmero: "
 	;
 	read valor2
 	;
@@ -25,11 +25,11 @@ YYRPS015	; CALCULADORA
 	;
 	write !, "Soma.: " _valor1_" + "_valor2_" = "_soma
 	;
-	write !, "Subtração.: " _valor1_" - "_valor2_" = "_sub
+	write !, "SubtraÃ§Äƒo.: " _valor1_" - "_valor2_" = "_sub
 	;
-	write !, "Multiplicação.: " _valor1_" * "_valor2_" = "_mult
+	write !, "MultiplicaÃ§Äƒo.: " _valor1_" * "_valor2_" = "_mult
 	;
-	write !, "Divisão.: " _valor1_" / "_valor2_" = "_div
+	write !, "DivisÄƒo.: " _valor1_" / "_valor2_" = "_div
 	;
 	;
 	;
