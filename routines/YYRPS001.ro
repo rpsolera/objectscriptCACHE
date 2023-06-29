@@ -1,0 +1,37 @@
+IRIS for Windows^MAC^routine output by %apiRTN^^~Format=IRIS.S~^RAW
+%RO on 28 Jun 2023 09:55:58PM
+YYRPS001^MAC^^66651,69166.8882936^0
+YYRPS001	; Minha primeira rotina
+	;
+	;
+	;
+	;
+	write !, "Digite o valor 1:"
+	;
+	write !
+	;
+	read valor1
+	;
+	write !, "Digite o valor 2:"
+	;
+	write !
+	;
+	read valor2
+	;
+	set soma = valor1 + valor2
+	;
+	set sub = valor1 - valor2
+	;
+	write !, "Digite a operação [1]SOMA ou [2]SUBTRAÇÃO"
+	;
+	read opcao
+	;
+	if opcao = "1" do
+	. write !, "A soma dos valores é: "_soma
+	if opcao = "2" do
+	. write !, "A subtração dos valores é: "_sub
+	;
+	quit
+
+
+

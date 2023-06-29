@@ -1,0 +1,24 @@
+IRIS for Windows^MAC^routine output by %apiRTN^^~Format=IRIS.S~^RAW
+%RO on 28 Jun 2023 09:56:45PM
+YYRPS020^MAC^^66652,79498.3587009^0
+YYRPS020	; PAR OU ÍMPAR
+	;
+	;
+	write #
+	;
+	;
+	write !, "Digite um número: "
+	;
+	read numero
+	;
+	if numero#2=0 do
+	.write !, "O número "_numero_" é PAR!"
+	if numero#2'=0 do
+	.write !, "O número "_numero_" é ÍMPAR!"
+	;
+	;
+	;
+	quit
+
+
+
