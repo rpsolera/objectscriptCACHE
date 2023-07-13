@@ -1,4 +1,4 @@
-# objectscritpCACHE
+# objectscriptCACHE
 Treinamento Caché ObjectScript
 
 Me chamo Rodolfo e estou buscando conhecimento na linguagem COS, estou procurando me aperfeiçoar
